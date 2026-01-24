@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Home",
+    "learn": "Learn to Read",
+    "lessons": "Lessons",
+    "news": "News",
+    "about": "About"
+  },
+  "home": {
+    "hero": {
+      "title": "Learn to Read",
+      "subtitle": "A free literacy platform for South Africa and beyond",
+      "cta": "Start Learning",
+      "secondary": "Explore Lessons"
+    },
+    "stats": {
+      "title": "Why Literacy Matters",
+      "learners": "Learners Struggle to Read",
+      "percentage": "78%",
+      "description": "of Grade 4 learners in South Africa cannot read for meaning",
+      "languages": "11 Languages",
+      "languagesDesc": "Official languages in South Africa that need literacy support"
+    },
+    "features": {
+      "title": "How We Help You Learn",
+      "voice": {
+        "title": "Voice Reading",
+        "description": "Listen to words being read aloud while following along"
+      },
+      "highlight": {
+        "title": "Word Highlighting",
+        "description": "Each word is highlighted as you read, showing direction"
+      },
+      "speed": {
+        "title": "Adjustable Speed",
+        "description": "Control how fast or slow the reading goes"
+      },
+      "languages": {
+        "title": "Multiple Languages",
+        "description": "Learn in Zulu, Xhosa, Afrikaans, and more"
+      }
+    },
+    "regions": {
+      "title": "News and Stories from Africa",
+      "southAfrica": "South Africa",
+      "southernAfrica": "Southern Africa",
+      "africa": "Rest of Africa"
+    }
+  },
+  "learn": {
+    "title": "Learn to Read",
+    "subtitle": "Practice reading with voice-guided lessons",
+    "selectLesson": "Select a Lesson",
+    "practiceText": "Practice Reading Text",
+    "customText": "Enter your own text to practice",
+    "startPractice": "Start Practice"
+  },
+  "lessons": {
+    "title": "Reading Lessons",
+    "subtitle": "Step-by-step lessons from letters to stories",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "startLesson": "Start Lesson",
+    "continue": "Continue"
+  },
+  "news": {
+    "title": "African News",
+    "subtitle": "Read news from South Africa and across the continent",
+    "filterRegion": "Filter by Region",
+    "filterCategory": "Filter by Category",
+    "allRegions": "All Regions",
+    "allCategories": "All Categories",
+    "readMore": "Read More",
+    "practiceReading": "Practice Reading This",
+    "externalSources": "External News Sources",
+    "visitSource": "Visit Website"
+  },
+  "about": {
+    "title": "About Learn to Read SA",
+    "mission": {
+      "title": "Our Mission",
+      "text": "We believe everyone deserves the chance to learn to read. Our platform provides free, accessible literacy education in South African languages and beyond."
+    },
+    "crisis": {
+      "title": "The Literacy Crisis",
+      "text": "South Africa faces one of the worst literacy rates among comparable countries. Studies show that 78% of Grade 4 learners cannot read for meaning. This means they can sound out words but do not understand what they read."
+    },
+    "causes": {
+      "title": "Why This Happens",
+      "poverty": "Poverty limits access to books and learning materials",
+      "resources": "Schools lack textbooks and trained teachers",
+      "language": "Children often learn in a second language",
+      "early": "Limited early childhood reading exposure"
+    },
+    "solution": {
+      "title": "How We Help",
+      "text": "Our platform uses proven techniques to help people learn to read at any age."
+    }
+  },
+  "reading": {
+    "play": "Play",
+    "pause": "Pause",
+    "stop": "Stop",
+    "restart": "Restart",
+    "speed": "Reading Speed",
+    "verySlow": "Very Slow",
+    "slow": "Slow",
+    "normal": "Normal",
+    "fast": "Fast",
+    "veryFast": "Very Fast",
+    "voice": "Voice"
+  },
+  "footer": {
+    "mission": "Helping South Africans and all Africans learn to read, one word at a time.",
+    "quickLinks": "Quick Links",
+    "languages": "Languages",
+    "contact": "Contact",
+    "contactText": "Have questions or want to help? Reach out to us.",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "tryAgain": "Try Again",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close"
+  }
+}

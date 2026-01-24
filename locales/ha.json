@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Gida",
+    "learn": "Koyi Karatu",
+    "lessons": "Darussa",
+    "news": "Labarai",
+    "about": "Game da"
+  },
+  "home": {
+    "hero": {
+      "title": "Koyi Karatu",
+      "subtitle": "Dandali na kyauta na ilimin karatu da rubutu don Afirka ta Kudu da baya",
+      "cta": "Fara Koyo",
+      "secondary": "Bincika Darussa"
+    },
+    "stats": {
+      "title": "Me Ya Sa Karatu Ya Zama Muhimmi",
+      "learners": "Dalibai Suna Fuskantar Wahala Wajen Karatu",
+      "percentage": "78%",
+      "description": "na daliban Aji 4 a Afirka ta Kudu ba za su iya karatu da fahimta ba",
+      "languages": "Harsuna 11",
+      "languagesDesc": "Harsunan hukuma a Afirka ta Kudu da ke bukatar goyon bayan karatu"
+    },
+    "features": {
+      "title": "Yadda Muke Taimaka Maka Koyo",
+      "voice": {
+        "title": "Karatu da Murya",
+        "description": "Saurari kalmomi ana karantawa da murya yayin da kake bi"
+      },
+      "highlight": {
+        "title": "Haskaka Kalma",
+        "description": "Ana haskaka kowace kalma yayin da kake karatu, tana nuna hanya"
+      },
+      "speed": {
+        "title": "Saurin da Za a Iya Gyarawa",
+        "description": "Sarrafa yadda karatu ke gudana da sauri ko a hankali"
+      },
+      "languages": {
+        "title": "Harsuna Da Yawa",
+        "description": "Koyi a cikin Hausa, Zulu, Afirkaans, da ƙari"
+      }
+    },
+    "regions": {
+      "title": "Labarai da Labarai daga Afirka",
+      "southAfrica": "Afirka ta Kudu",
+      "southernAfrica": "Kudu na Afirka",
+      "africa": "Sauran Afirka"
+    }
+  },
+  "learn": {
+    "title": "Koyi Karatu",
+    "subtitle": "Yi aiki akan karatu tare da darussa da murya ke jagoranta",
+    "selectLesson": "Zaɓi Darasi",
+    "practiceText": "Yi Aiki akan Karanta Rubutu",
+    "customText": "Shigar da rubutunka don yin aiki",
+    "startPractice": "Fara Aiki"
+  },
+  "lessons": {
+    "title": "Darussan Karatu",
+    "subtitle": "Darussa mataki-mataki daga haruffa zuwa labarai",
+    "beginner": "Mai farawa",
+    "intermediate": "Tsakiya",
+    "advanced": "Ci Gaba",
+    "startLesson": "Fara Darasi",
+    "continue": "Ci gaba"
+  },
+  "news": {
+    "title": "Labaran Afirka",
+    "subtitle": "Karanta labarai daga Afirka ta Kudu da ko'ina cikin nahiyar",
+    "filterRegion": "Tace ta Yanki",
+    "filterCategory": "Tace ta Nau'i",
+    "allRegions": "Dukkan Yankuna",
+    "allCategories": "Dukkan Nau'o'i",
+    "readMore": "Karanta Ƙari",
+    "practiceReading": "Yi Aiki akan Karanta Wannan",
+    "externalSources": "Kafofin Labarai na Waje",
+    "visitSource": "Ziyarci Shafin Yanar Gizo"
+  },
+  "about": {
+    "title": "Game da Koyi Karatu SA",
+    "mission": {
+      "title": "Manufarmu",
+      "text": "Muna imani kowa ya cancanci damar koyon karatu. Dandalinmu yana ba da ilimi kyauta, mai sauƙin isa na karatu da rubutu a cikin harsunan Afirka ta Kudu da baya."
+    },
+    "crisis": {
+      "title": "Rikicin Karatu da Rubutu",
+      "text": "Afirka ta Kudu tana fuskantar ɗaya daga cikin mafi munin ƙididdiga na karatu da rubutu tsakanin ƙasashe masu kama. Bincike ya nuna cewa 78% na daliban Aji 4 ba za su iya karatu da fahimta ba."
+    },
+    "causes": {
+      "title": "Me Ya Sa Wannan Ke Faruwa",
+      "poverty": "Talauci yana hana samun littattafai da kayan koyo",
+      "resources": "Makarantu sun rasa littattafan karatu da malamai da aka horar",
+      "language": "Yara sau da yawa suna koyo a harshe na biyu",
+      "early": "Ƙarancin fallasa karatu a yarinta"
+    },
+    "solution": {
+      "title": "Yadda Muke Taimakawa",
+      "text": "Dandalinmu yana amfani da dabaru da aka tabbatar don taimaka wa mutane su koyi karatu a kowane shekaru."
+    }
+  },
+  "reading": {
+    "play": "Buga",
+    "pause": "Tsaya",
+    "stop": "Daina",
+    "restart": "Fara Sake",
+    "speed": "Saurin Karatu",
+    "verySlow": "A hankali Sosai",
+    "slow": "A hankali",
+    "normal": "Al'ada",
+    "fast": "Sauri",
+    "veryFast": "Sauri Sosai",
+    "voice": "Murya"
+  },
+  "footer": {
+    "mission": "Taimaka wa 'yan Afirka ta Kudu da dukkan Afirkawa su koyi karatu, kalma guda a lokaci guda.",
+    "quickLinks": "Hanyoyin Sauri",
+    "languages": "Harsuna",
+    "contact": "Tuntuɓa",
+    "contactText": "Kuna da tambayoyi ko kuna son taimakawa? Tuntuɓe mu.",
+    "rights": "An tanada dukkan hakkoki."
+  },
+  "common": {
+    "loading": "Ana lodawa...",
+    "error": "Wani abu ya yi laifi",
+    "tryAgain": "Sake Gwadawa",
+    "next": "Na Gaba",
+    "previous": "Na Baya",
+    "close": "Rufe"
+  }
+}

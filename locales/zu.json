@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Ikhaya",
+    "learn": "Funda Ukufunda",
+    "lessons": "Izifundo",
+    "news": "Izindaba",
+    "about": "Mayelana"
+  },
+  "home": {
+    "hero": {
+      "title": "Funda Ukufunda",
+      "subtitle": "Inkundla yamahhala yokufunda nokubhala yaseNingizimu Afrika nangaphezulu",
+      "cta": "Qala Ukufunda",
+      "secondary": "Hlola Izifundo"
+    },
+    "stats": {
+      "title": "Kungani Ukufunda Kubalulekile",
+      "learners": "Abafundi Bahluleka Ukufunda",
+      "percentage": "78%",
+      "description": "wabafundi beBanga 4 eNingizimu Afrika abakwazi ukufunda ngokuqonda",
+      "languages": "Izilimi Eziyi-11",
+      "languagesDesc": "Izilimi ezisemthethweni eNingizimu Afrika ezidinga ukusekelwa kokufunda"
+    },
+    "features": {
+      "title": "Sikusize Kanjani Ukufunda",
+      "voice": {
+        "title": "Ukufunda Ngezwi",
+        "description": "Lalela amagama efundwa kakhulu ngenkathi ulandela"
+      },
+      "highlight": {
+        "title": "Ukugqamisa Igama",
+        "description": "Igama ngalinye ligqanyiswa njengoba ufunda, libonisa indlela"
+      },
+      "speed": {
+        "title": "Isivinini Esilungisekayo",
+        "description": "Lawula ukuthi ukufunda kuhamba ngokushesha kangakanani noma kancane kangakanani"
+      },
+      "languages": {
+        "title": "Izilimi Eziningi",
+        "description": "Funda ngesiZulu, isiXhosa, isiBhunu, nokunye"
+      }
+    },
+    "regions": {
+      "title": "Izindaba Nezindaba Evela E-Afrika",
+      "southAfrica": "Ningizimu Afrika",
+      "southernAfrica": "Ningizimu ne-Afrika",
+      "africa": "I-Afrika Yonke"
+    }
+  },
+  "learn": {
+    "title": "Funda Ukufunda",
+    "subtitle": "Zijwayeze ukufunda ngezifundo eziholwa yizwi",
+    "selectLesson": "Khetha Isifundo",
+    "practiceText": "Zijwayeze Ukufunda Umbhalo",
+    "customText": "Faka umbhalo wakho ukuze uzijwayeze",
+    "startPractice": "Qala Ukuzijwayeza"
+  },
+  "lessons": {
+    "title": "Izifundo Zokufunda",
+    "subtitle": "Izifundo zinyathelo ngenyathelo kusuka ezinhlamvini kuya ezindabeni",
+    "beginner": "Oqalayo",
+    "intermediate": "Ophakathi",
+    "advanced": "Ophezulu",
+    "startLesson": "Qala Isifundo",
+    "continue": "Qhubeka"
+  },
+  "news": {
+    "title": "Izindaba Zase-Afrika",
+    "subtitle": "Funda izindaba zaseNingizimu Afrika nakuyo yonke izwekazi",
+    "filterRegion": "Hlunga Ngesifunda",
+    "filterCategory": "Hlunga Ngesigaba",
+    "allRegions": "Zonke Izifunda",
+    "allCategories": "Zonke Izigaba",
+    "readMore": "Funda Kabanzi",
+    "practiceReading": "Zijwayeze Ukufunda Lokhu",
+    "externalSources": "Imithombo Yezindaba Yangaphandle",
+    "visitSource": "Vakashela Iwebhusayithi"
+  },
+  "about": {
+    "title": "Mayelana Nokufunda Ukufunda SA",
+    "mission": {
+      "title": "Umgomo Wethu",
+      "text": "Sikholelwa ukuthi wonke umuntu ufanelwe ithuba lokufunda ukufunda. Inkundla yethu ihlinzeka ngemfundo yamahhala, efinyelelekayo yokufunda nokubhala ngezilimi zaseNingizimu Afrika nangaphezulu."
+    },
+    "crisis": {
+      "title": "Inkinga Yokufunda Nokubhala",
+      "text": "INingizimu Afrika ibhekene nezinga elilodwa elibi kakhulu lokufunda nokubhala phakathi kwamazwe afanayo. Ucwaningo lubonisa ukuthi u-78% wabafundi beBanga 4 abakwazi ukufunda ngokuqonda."
+    },
+    "causes": {
+      "title": "Kungani Lokhu Kwenzeka",
+      "poverty": "Ubuphofu bukhawulela ukufinyelela ezincwadini nasezinsizeni zokufunda",
+      "resources": "Izikole azinayo izincwadi nokufundiswa okufanele",
+      "language": "Izingane zivame ukufunda ngolimi lwesibili",
+      "early": "Ukuchayeka okuncane kokufunda ebuntwaneni"
+    },
+    "solution": {
+      "title": "Sisize Kanjani",
+      "text": "Inkundla yethu isebenzisa izindlela eziboniswe ukuze zisize abantu ukufunda ukufunda kunoma yimuphi ubudala."
+    }
+  },
+  "reading": {
+    "play": "Dlala",
+    "pause": "Misa",
+    "stop": "Misa",
+    "restart": "Qala Kabusha",
+    "speed": "Isivinini Sokufunda",
+    "verySlow": "Kancane Kakhulu",
+    "slow": "Kancane",
+    "normal": "Okuvamile",
+    "fast": "Ngokushesha",
+    "veryFast": "Ngokushesha Kakhulu",
+    "voice": "Izwi"
+  },
+  "footer": {
+    "mission": "Ukusiza abantu baseNingizimu Afrika nabo bonke abase-Afrika ukufunda ukufunda, igama ngalinye ngesikhathi.",
+    "quickLinks": "Izixhumanisi Ezisheshayo",
+    "languages": "Izilimi",
+    "contact": "Xhumana",
+    "contactText": "Unemibuzo noma ufuna ukusiza? Sithinte.",
+    "rights": "Wonke amalungelo agodliwe."
+  },
+  "common": {
+    "loading": "Iyalayisha...",
+    "error": "Kukhona okungahambanga kahle",
+    "tryAgain": "Zama Futhi",
+    "next": "Okulandelayo",
+    "previous": "Okwangaphambili",
+    "close": "Vala"
+  }
+}

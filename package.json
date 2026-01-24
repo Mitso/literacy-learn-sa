@@ -1,0 +1,43 @@
+{
+  "name": "literacy-learn-sa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A literacy learning platform for South Africa with voice-guided reading, word highlighting, and multi-language support",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
+  },
+  "keywords": [
+    "literacy",
+    "education",
+    "south-africa",
+    "reading",
+    "learning",
+    "nuxt",
+    "vue"
+  ],
+  "author": "Learn to Read SA",
+  "license": "MIT",
+  "dependencies": {
+    "@nuxtjs/i18n": "8.3.1",
+    "@pinia/nuxt": "0.5.4",
+    "@vueuse/core": "10.11.1",
+    "@vueuse/nuxt": "10.11.1",
+    "nuxt": "3.13.2",
+    "pinia": "2.2.4",
+    "vue": "3.5.12",
+    "vue-router": "4.4.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "overrides": {
+    "vue": "3.5.12"
+  }
+}

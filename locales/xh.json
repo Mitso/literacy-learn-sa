@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Ikhaya",
+    "learn": "Funda Ukufunda",
+    "lessons": "Izifundo",
+    "news": "Iindaba",
+    "about": "Malunga"
+  },
+  "home": {
+    "hero": {
+      "title": "Funda Ukufunda",
+      "subtitle": "Iqonga lokufunda nokubhala lasimahla loMzantsi Afrika nangaphaya",
+      "cta": "Qala Ukufunda",
+      "secondary": "Phonononga Izifundo"
+    },
+    "stats": {
+      "title": "Kutheni Ukufunda Kubalulekile",
+      "learners": "Abafundi Bayasilela Ukufunda",
+      "percentage": "78%",
+      "description": "wabafundi beGrade 4 eMzantsi Afrika abakwazi ukufunda ngokuqonda",
+      "languages": "Iilwimi Eziyi-11",
+      "languagesDesc": "Iilwimi ezisemthethweni eMzantsi Afrika ezifuna inkxaso yokufunda"
+    },
+    "features": {
+      "title": "Sikunceda Njani Ukufunda",
+      "voice": {
+        "title": "Ukufunda Ngelizwi",
+        "description": "Mamela amagama afundwa ngokuvakalayo ngelixa ulandela"
+      },
+      "highlight": {
+        "title": "Ukuqaqambisa Igama",
+        "description": "Igama ngalinye liyaqaqanjiswa njengoko ufunda, libonisa indlela"
+      },
+      "speed": {
+        "title": "Isivinini Esilungisekayo",
+        "description": "Lawula ukuba ukufunda kuhamba ngokukhawuleza kangakanani okanye kancinci kangakanani"
+      },
+      "languages": {
+        "title": "Iilwimi Ezininzi",
+        "description": "Funda ngesiXhosa, isiZulu, iBhulu, nokunye"
+      }
+    },
+    "regions": {
+      "title": "Iindaba Namabali Avela E-Afrika",
+      "southAfrica": "Mzantsi Afrika",
+      "southernAfrica": "Mzantsi Afrika",
+      "africa": "I-Afrika Iphela"
+    }
+  },
+  "learn": {
+    "title": "Funda Ukufunda",
+    "subtitle": "Ziqhelanise ukufunda ngezifundo ezikhokelwa lilizwi",
+    "selectLesson": "Khetha Isifundo",
+    "practiceText": "Ziqhelanise Ukufunda Umbhalo",
+    "customText": "Faka umbhalo wakho ukuze uziqhelanise",
+    "startPractice": "Qala Ukuziqhelanisa"
+  },
+  "lessons": {
+    "title": "Izifundo Zokufunda",
+    "subtitle": "Izifundo zinyathelo ngenyathelo ukusuka kunobumba ukuya kumabali",
+    "beginner": "Oqalayo",
+    "intermediate": "Ophakathi",
+    "advanced": "Ophezulu",
+    "startLesson": "Qala Isifundo",
+    "continue": "Qhubeka"
+  },
+  "news": {
+    "title": "Iindaba Zase-Afrika",
+    "subtitle": "Funda iindaba zaseMzantsi Afrika nakuyo yonke ilizwekazi",
+    "filterRegion": "Hlela Ngommandla",
+    "filterCategory": "Hlela Ngohlobo",
+    "allRegions": "Yonke Imimandla",
+    "allCategories": "Zonke Iintlobo",
+    "readMore": "Funda Ngakumbi",
+    "practiceReading": "Ziqhelanise Ukufunda Oku",
+    "externalSources": "Imithombo Yeendaba Yangaphandle",
+    "visitSource": "Ndwendwela Iwebhusayithi"
+  },
+  "about": {
+    "title": "Malunga Nokufunda Ukufunda SA",
+    "mission": {
+      "title": "Injongo Yethu",
+      "text": "Sikholelwa ukuba wonke umntu ufanelwe ithuba lokufunda ukufunda. Iqonga lethu libonelela ngemfundo yasimahla, efikelelekayo yokufunda nokubhala ngeelwimi zaseMzantsi Afrika nangaphaya."
+    },
+    "crisis": {
+      "title": "Ingxaki Yokufunda Nokubhala",
+      "text": "UMzantsi Afrika ujamelene nezinga elibi lokufunda nokubhala phakathi kwamazwe afanayo. Uphando lubonisa ukuba u-78% wabafundi beGrade 4 abakwazi ukufunda ngokuqonda."
+    },
+    "causes": {
+      "title": "Kutheni Oku Kusenzeka",
+      "poverty": "Ubuhlwempu buyathintela ukufikelela kwiincwadi nakwizixhobo zokufunda",
+      "resources": "Izikolo azinayo iincwadi nokufundiswa okufanelekileyo",
+      "language": "Abantwana badla ngokufunda ngolwimi lwesibini",
+      "early": "Ukuchukumiseka okuncinci kokufunda ebuntwaneni"
+    },
+    "solution": {
+      "title": "Sinceda Njani",
+      "text": "Iqonga lethu lisebenzisa iindlela ezibonisiweyo ukunceda abantu ukufunda ukufunda kuyo nayiphi na iminyaka."
+    }
+  },
+  "reading": {
+    "play": "Dlala",
+    "pause": "Misa",
+    "stop": "Yeka",
+    "restart": "Qala Kwakhona",
+    "speed": "Isantya Sokufunda",
+    "verySlow": "Kancinci Kakhulu",
+    "slow": "Kancinci",
+    "normal": "Okuqhelekileyo",
+    "fast": "Ngokukhawuleza",
+    "veryFast": "Ngokukhawuleza Kakhulu",
+    "voice": "Ilizwi"
+  },
+  "footer": {
+    "mission": "Ukunceda abantu baseMzantsi Afrika nabo bonke abase-Afrika ukufunda ukufunda, igama ngalinye ngexesha.",
+    "quickLinks": "Amakhonkco Akhawulezayo",
+    "languages": "Iilwimi",
+    "contact": "Qhagamshelana",
+    "contactText": "Unemibuzo okanye ufuna ukunceda? Sidibanise.",
+    "rights": "Onke amalungelo agciniwe."
+  },
+  "common": {
+    "loading": "Iyalayisha...",
+    "error": "Kukho into engahambanga kakuhle",
+    "tryAgain": "Zama Kwakhona",
+    "next": "Okulandelayo",
+    "previous": "Okwangaphambili",
+    "close": "Vala"
+  }
+}

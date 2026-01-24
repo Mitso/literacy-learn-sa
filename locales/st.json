@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Lapeng",
+    "learn": "Ithuta ho Bala",
+    "lessons": "Lithuto",
+    "news": "Litaba",
+    "about": "Ka"
+  },
+  "home": {
+    "hero": {
+      "title": "Ithuta ho Bala",
+      "subtitle": "Sethala sa mahala sa ho bala le ho ngola sa Afrika Borwa le mose",
+      "cta": "Qala ho Ithuta",
+      "secondary": "Hlahloba Lithuto"
+    },
+    "stats": {
+      "title": "Hobaneng ho Bala le ho Ngola ho le Bohlokoa",
+      "learners": "Baithuti ba Sokola ho Bala",
+      "percentage": "78%",
+      "description": "ea baithuti ba Sehlopha sa 4 Afrika Borwa ha ba kgone ho bala ka kutloisiso",
+      "languages": "Lipuo tse 11",
+      "languagesDesc": "Lipuo tse semmuso Afrika Borwa tse hlokang tšehetso ea ho bala"
+    },
+    "features": {
+      "title": "Re U Thusa Joang ho Ithuta",
+      "voice": {
+        "title": "Ho Bala ka Lentsoe",
+        "description": "Mamela mantsoe a baloa haholo ha u ntse u latela"
+      },
+      "highlight": {
+        "title": "Ho Totobatsa Lentsoe",
+        "description": "Lentsoe le leng le le leng le totobatsoa ha u bala, le bonts'a tsela"
+      },
+      "speed": {
+        "title": "Lebelo le ka Fetoloa",
+        "description": "Laola hore na ho bala ho tsamaea kapele hakae kapa butle hakae"
+      },
+      "languages": {
+        "title": "Lipuo tse Ngata",
+        "description": "Ithuta ka Sesotho, Sezulu, Sekoasa, le tse ling"
+      }
+    },
+    "regions": {
+      "title": "Litaba le Lipale tse tsoang Afrika",
+      "southAfrica": "Afrika Borwa",
+      "southernAfrica": "Borwa ba Afrika",
+      "africa": "Afrika kaofela"
+    }
+  },
+  "learn": {
+    "title": "Ithuta ho Bala",
+    "subtitle": "Ikoetlise ho bala ka lithuto tse tatasoang ke lentsoe",
+    "selectLesson": "Khetha Thuto",
+    "practiceText": "Ikoetlise ho Bala Mongolo",
+    "customText": "Kenya mongolo oa hau ho ikoetlisa",
+    "startPractice": "Qala ho Ikoetlisa"
+  },
+  "lessons": {
+    "title": "Lithuto tsa ho Bala",
+    "subtitle": "Lithuto tse latellanang ho tloha litlhakunyanyane ho ea lipale",
+    "beginner": "Moqali",
+    "intermediate": "Mohareng",
+    "advanced": "Tsoetseng Pele",
+    "startLesson": "Qala Thuto",
+    "continue": "Tsoela Pele"
+  },
+  "news": {
+    "title": "Litaba tsa Afrika",
+    "subtitle": "Bala litaba tsa Afrika Borwa le naheng kaofela",
+    "filterRegion": "Sefa ka Sebaka",
+    "filterCategory": "Sefa ka Mofuta",
+    "allRegions": "Libaka Tsohle",
+    "allCategories": "Mefuta Eohle",
+    "readMore": "Bala Haholoanyane",
+    "practiceReading": "Ikoetlise ho Bala Sena",
+    "externalSources": "Mehloli ea Litaba ea Kantle",
+    "visitSource": "Etela Webosaete"
+  },
+  "about": {
+    "title": "Ka ho Ithuta ho Bala SA",
+    "mission": {
+      "title": "Morero oa Rona",
+      "text": "Re lumela hore e mong le e mong o lokeloa ke monyetla oa ho ithuta ho bala. Sethala sa rona se fana ka thuto ea mahala, e fihlellehang ea ho bala le ho ngola ka lipuo tsa Afrika Borwa le mose."
+    },
+    "crisis": {
+      "title": "Bothata ba ho Bala le ho Ngola",
+      "text": "Afrika Borwa e tobana le e nngoe ea lipalopalo tse mpe haholo tsa ho bala le ho ngola hara linaha tse tšoanang. Lipatlisiso li bonts'a hore 78% ea baithuti ba Sehlopha sa 4 ha ba kgone ho bala ka kutloisiso."
+    },
+    "causes": {
+      "title": "Hobaneng Sena se Etsahala",
+      "poverty": "Bofuma bo thibela phihlello ea libuka le lisebelisoa tsa ho ithuta",
+      "resources": "Likolo ha li na libuka le matichere a koetlisitsoeng",
+      "language": "Bana hangata ba ithuta ka puo ea bobeli",
+      "early": "Ho balela bana ka bonyane bochabeng"
+    },
+    "solution": {
+      "title": "Re Thusa Joang",
+      "text": "Sethala sa rona se sebelisa mekhoa e tiisitsoeng ho thusa batho ho ithuta ho bala lilemong life kapa life."
+    }
+  },
+  "reading": {
+    "play": "Bapala",
+    "pause": "Emisa",
+    "stop": "Emisa",
+    "restart": "Qala Bocha",
+    "speed": "Lebelo la ho Bala",
+    "verySlow": "Butle Haholo",
+    "slow": "Butle",
+    "normal": "Tlhaho",
+    "fast": "Kapele",
+    "veryFast": "Kapele Haholo",
+    "voice": "Lentsoe"
+  },
+  "footer": {
+    "mission": "Ho thusa Maafrika Borwa le Maafrika kaofela ho ithuta ho bala, lentsoe ka lentsoe.",
+    "quickLinks": "Likhokahano tse Potlakileng",
+    "languages": "Lipuo",
+    "contact": "Ikopanye",
+    "contactText": "Na u na le lipotso kapa u batla ho thusa? Ikopanye le rona.",
+    "rights": "Litokelo tsohle li sirelelitsoe."
+  },
+  "common": {
+    "loading": "Ea laouta...",
+    "error": "Ho na le se sitileng",
+    "tryAgain": "Leka Hape",
+    "next": "E Latelang",
+    "previous": "E Fetileng",
+    "close": "Koala"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "learn": "Jifunze Kusoma",
+    "lessons": "Masomo",
+    "news": "Habari",
+    "about": "Kuhusu"
+  },
+  "home": {
+    "hero": {
+      "title": "Jifunze Kusoma",
+      "subtitle": "Jukwaa la bure la kusoma na kuandika kwa Afrika Kusini na zaidi",
+      "cta": "Anza Kujifunza",
+      "secondary": "Chunguza Masomo"
+    },
+    "stats": {
+      "title": "Kwa Nini Kusoma Kuwa Muhimu",
+      "learners": "Wanafunzi Wanashindwa Kusoma",
+      "percentage": "78%",
+      "description": "ya wanafunzi wa Daraja la 4 Afrika Kusini hawawezi kusoma kwa kuelewa",
+      "languages": "Lugha 11",
+      "languagesDesc": "Lugha rasmi nchini Afrika Kusini zinazohitaji msaada wa kusoma"
+    },
+    "features": {
+      "title": "Tunakusaidia Vipi Kujifunza",
+      "voice": {
+        "title": "Kusoma kwa Sauti",
+        "description": "Sikia maneno yakisomwa kwa sauti kubwa ukifuatana"
+      },
+      "highlight": {
+        "title": "Kuangazia Neno",
+        "description": "Kila neno linangaazwa unaposoma, kuonyesha mwelekeo"
+      },
+      "speed": {
+        "title": "Kasi Inayobadilika",
+        "description": "Dhibiti jinsi kusoma kunavyoenda haraka au polepole"
+      },
+      "languages": {
+        "title": "Lugha Nyingi",
+        "description": "Jifunze kwa Kiswahili, Kizulu, Kiafrikans, na zaidi"
+      }
+    },
+    "regions": {
+      "title": "Habari na Hadithi kutoka Afrika",
+      "southAfrica": "Afrika Kusini",
+      "southernAfrica": "Kusini mwa Afrika",
+      "africa": "Afrika Nzima"
+    }
+  },
+  "learn": {
+    "title": "Jifunze Kusoma",
+    "subtitle": "Zoezi la kusoma na masomo yanayoongozwa na sauti",
+    "selectLesson": "Chagua Somo",
+    "practiceText": "Zoezi la Kusoma Maandishi",
+    "customText": "Weka maandishi yako kwa zoezi",
+    "startPractice": "Anza Zoezi"
+  },
+  "lessons": {
+    "title": "Masomo ya Kusoma",
+    "subtitle": "Masomo ya hatua kwa hatua kutoka herufi hadi hadithi",
+    "beginner": "Anayeanza",
+    "intermediate": "Kati",
+    "advanced": "Juu",
+    "startLesson": "Anza Somo",
+    "continue": "Endelea"
+  },
+  "news": {
+    "title": "Habari za Afrika",
+    "subtitle": "Soma habari kutoka Afrika Kusini na bara zima",
+    "filterRegion": "Chuja kwa Eneo",
+    "filterCategory": "Chuja kwa Aina",
+    "allRegions": "Maeneo Yote",
+    "allCategories": "Aina Zote",
+    "readMore": "Soma Zaidi",
+    "practiceReading": "Zoezi la Kusoma Hii",
+    "externalSources": "Vyanzo vya Habari vya Nje",
+    "visitSource": "Tembelea Tovuti"
+  },
+  "about": {
+    "title": "Kuhusu Jifunze Kusoma SA",
+    "mission": {
+      "title": "Dhamira Yetu",
+      "text": "Tunaamini kila mtu anastahili fursa ya kujifunza kusoma. Jukwaa letu linatoa elimu ya bure, inayofikika ya kusoma na kuandika kwa lugha za Afrika Kusini na zaidi."
+    },
+    "crisis": {
+      "title": "Mgogoro wa Kusoma na Kuandika",
+      "text": "Afrika Kusini inakabiliwa na mojawapo ya viwango vibaya zaidi vya kusoma na kuandika kati ya nchi zinazofanana. Utafiti unaonyesha kuwa 78% ya wanafunzi wa Daraja la 4 hawawezi kusoma kwa kuelewa."
+    },
+    "causes": {
+      "title": "Kwa Nini Hii Inatokea",
+      "poverty": "Umaskini unazuia upatikanaji wa vitabu na vifaa vya kujifunza",
+      "resources": "Shule zinakosa vitabu na walimu waliofunzwa",
+      "language": "Watoto mara nyingi hujifunza kwa lugha ya pili",
+      "early": "Mfiduo mdogo wa kusoma utotoni"
+    },
+    "solution": {
+      "title": "Tunasaidia Vipi",
+      "text": "Jukwaa letu linatumia mbinu zilizothibitishwa kusaidia watu kujifunza kusoma katika umri wowote."
+    }
+  },
+  "reading": {
+    "play": "Cheza",
+    "pause": "Simama",
+    "stop": "Acha",
+    "restart": "Anza Upya",
+    "speed": "Kasi ya Kusoma",
+    "verySlow": "Polepole Sana",
+    "slow": "Polepole",
+    "normal": "Kawaida",
+    "fast": "Haraka",
+    "veryFast": "Haraka Sana",
+    "voice": "Sauti"
+  },
+  "footer": {
+    "mission": "Kusaidia Waafrika Kusini na Waafrika wote kujifunza kusoma, neno moja kwa wakati.",
+    "quickLinks": "Viungo vya Haraka",
+    "languages": "Lugha",
+    "contact": "Wasiliana",
+    "contactText": "Una maswali au unataka kusaidia? Wasiliana nasi.",
+    "rights": "Haki zote zimehifadhiwa."
+  },
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Kitu kimekwenda vibaya",
+    "tryAgain": "Jaribu Tena",
+    "next": "Inayofuata",
+    "previous": "Iliyotangulia",
+    "close": "Funga"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Tuis",
+    "learn": "Leer Lees",
+    "lessons": "Lesse",
+    "news": "Nuus",
+    "about": "Oor Ons"
+  },
+  "home": {
+    "hero": {
+      "title": "Leer Lees",
+      "subtitle": "'n Gratis geletterheidsplatform vir Suid-Afrika en verder",
+      "cta": "Begin Leer",
+      "secondary": "Verken Lesse"
+    },
+    "stats": {
+      "title": "Waarom Geletterdheid Saak Maak",
+      "learners": "Leerders Sukkel om te Lees",
+      "percentage": "78%",
+      "description": "van Graad 4 leerders in Suid-Afrika kan nie met begrip lees nie",
+      "languages": "11 Tale",
+      "languagesDesc": "Amptelike tale in Suid-Afrika wat geletterdheidsondersteuning nodig het"
+    },
+    "features": {
+      "title": "Hoe Ons Jou Help Leer",
+      "voice": {
+        "title": "Stemvoorlesing",
+        "description": "Luister na woorde wat hardop gelees word terwyl jy saamvolg"
+      },
+      "highlight": {
+        "title": "Woord Uitlig",
+        "description": "Elke woord word uitgelig soos jy lees, wys rigting"
+      },
+      "speed": {
+        "title": "Verstelbare Spoed",
+        "description": "Beheer hoe vinnig of stadig die lees gaan"
+      },
+      "languages": {
+        "title": "Veelvuldige Tale",
+        "description": "Leer in Zoeloe, Xhosa, Afrikaans, en meer"
+      }
+    },
+    "regions": {
+      "title": "Nuus en Stories van Afrika",
+      "southAfrica": "Suid-Afrika",
+      "southernAfrica": "Suider-Afrika",
+      "africa": "Res van Afrika"
+    }
+  },
+  "learn": {
+    "title": "Leer Lees",
+    "subtitle": "Oefen lees met stemgeleide lesse",
+    "selectLesson": "Kies 'n Les",
+    "practiceText": "Oefen Lees Teks",
+    "customText": "Voer jou eie teks in om te oefen",
+    "startPractice": "Begin Oefen"
+  },
+  "lessons": {
+    "title": "Leeslesse",
+    "subtitle": "Stap-vir-stap lesse van letters tot stories",
+    "beginner": "Beginner",
+    "intermediate": "Intermediêr",
+    "advanced": "Gevorderd",
+    "startLesson": "Begin Les",
+    "continue": "Gaan Voort"
+  },
+  "news": {
+    "title": "Afrika Nuus",
+    "subtitle": "Lees nuus van Suid-Afrika en regoor die kontinent",
+    "filterRegion": "Filter volgens Streek",
+    "filterCategory": "Filter volgens Kategorie",
+    "allRegions": "Alle Streke",
+    "allCategories": "Alle Kategorieë",
+    "readMore": "Lees Meer",
+    "practiceReading": "Oefen om Dit te Lees",
+    "externalSources": "Eksterne Nuusbronne",
+    "visitSource": "Besoek Webwerf"
+  },
+  "about": {
+    "title": "Oor Leer Lees SA",
+    "mission": {
+      "title": "Ons Missie",
+      "text": "Ons glo almal verdien die kans om te leer lees. Ons platform bied gratis, toeganklike geletterdheidsopvoeding in Suid-Afrikaanse tale en verder."
+    },
+    "crisis": {
+      "title": "Die Geletterdheidskrisis",
+      "text": "Suid-Afrika staar een van die ergste geletterdheidskoerse onder vergelykbare lande in die gesig. Studies toon dat 78% van Graad 4 leerders nie met begrip kan lees nie."
+    },
+    "causes": {
+      "title": "Waarom Dit Gebeur",
+      "poverty": "Armoede beperk toegang tot boeke en leermateriaal",
+      "resources": "Skole kort handboeke en opgeleide onderwysers",
+      "language": "Kinders leer dikwels in 'n tweede taal",
+      "early": "Beperkte vroeë kinderjare leesblootstelling"
+    },
+    "solution": {
+      "title": "Hoe Ons Help",
+      "text": "Ons platform gebruik bewese tegnieke om mense te help leer lees op enige ouderdom."
+    }
+  },
+  "reading": {
+    "play": "Speel",
+    "pause": "Pouse",
+    "stop": "Stop",
+    "restart": "Herbegin",
+    "speed": "Leesspoed",
+    "verySlow": "Baie Stadig",
+    "slow": "Stadig",
+    "normal": "Normaal",
+    "fast": "Vinnig",
+    "veryFast": "Baie Vinnig",
+    "voice": "Stem"
+  },
+  "footer": {
+    "mission": "Help Suid-Afrikaners en alle Afrikane om te leer lees, een woord op 'n slag.",
+    "quickLinks": "Vinnige Skakels",
+    "languages": "Tale",
+    "contact": "Kontak",
+    "contactText": "Het jy vrae of wil jy help? Kontak ons.",
+    "rights": "Alle regte voorbehou."
+  },
+  "common": {
+    "loading": "Laai...",
+    "error": "Iets het verkeerd gegaan",
+    "tryAgain": "Probeer Weer",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "close": "Sluit"
+  }
+}

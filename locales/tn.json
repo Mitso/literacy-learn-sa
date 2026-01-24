@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Gae",
+    "learn": "Ithute go Buisa",
+    "lessons": "Dithuto",
+    "news": "Dikgang",
+    "about": "Ka Ga"
+  },
+  "home": {
+    "hero": {
+      "title": "Ithute go Buisa",
+      "subtitle": "Setlhao sa go buisa le go kwala sa mahala sa Aforika Borwa le kwa ntle",
+      "cta": "Simolola go Ithuta",
+      "secondary": "Tlhotlhomisa Dithuto"
+    },
+    "stats": {
+      "title": "Goreng go Buisa go le Botlhokwa",
+      "learners": "Baithuti ba Sokola go Buisa",
+      "percentage": "78%",
+      "description": "ya baithuti ba Mophato wa 4 mo Aforika Borwa ga ba kgone go buisa ka go tlhaloganya",
+      "languages": "Dipuo di le 11",
+      "languagesDesc": "Dipuo tsa semmuso mo Aforika Borwa tse tlhokang tshegetso ya go buisa"
+    },
+    "features": {
+      "title": "Re go Thusa Jang go Ithuta",
+      "voice": {
+        "title": "Go Buisa ka Lentswe",
+        "description": "Reetsa mafoko a buisiwa kwa godimo fa o ntse o latela"
+      },
+      "highlight": {
+        "title": "Go Galaletsa Lefoko",
+        "description": "Lefoko lengwe le lengwe le a galalediwa fa o buisa, le bontsha tsela"
+      },
+      "speed": {
+        "title": "Lebelo le le ka Fetolwang",
+        "description": "Laola gore go buisa go tsamaya ka bonako jo bokae kgotsa ka bonya jo bokae"
+      },
+      "languages": {
+        "title": "Dipuo di le Dintsi",
+        "description": "Ithute ka Setswana, Sesotho, Sezulu, le tse dingwe"
+      }
+    },
+    "regions": {
+      "title": "Dikgang le Dikgang tse tswang Aforika",
+      "southAfrica": "Aforika Borwa",
+      "southernAfrica": "Borwa jwa Aforika",
+      "africa": "Aforika yotlhe"
+    }
+  },
+  "learn": {
+    "title": "Ithute go Buisa",
+    "subtitle": "Ikatise go buisa ka dithuto tse eteleditsweng ke lentswe",
+    "selectLesson": "Tlhopha Thuto",
+    "practiceText": "Ikatise go Buisa Mokwalo",
+    "customText": "Tsenya mokwalo wa gago go ikatisa",
+    "startPractice": "Simolola go Ikatisa"
+  },
+  "lessons": {
+    "title": "Dithuto tsa go Buisa",
+    "subtitle": "Dithuto tse latellanang go tswa ditlhaka go ya dikgang",
+    "beginner": "Mosimolohi",
+    "intermediate": "Magareng",
+    "advanced": "Maemo a a Kwa Godimo",
+    "startLesson": "Simolola Thuto",
+    "continue": "Tswelela"
+  },
+  "news": {
+    "title": "Dikgang tsa Aforika",
+    "subtitle": "Buisa dikgang tsa Aforika Borwa le mo kontinenteng yotlhe",
+    "filterRegion": "Tlhopha ka Kgaolo",
+    "filterCategory": "Tlhopha ka Mofuta",
+    "allRegions": "Dikgaolo Tsotlhe",
+    "allCategories": "Mefuta Yotlhe",
+    "readMore": "Buisa go Feta",
+    "practiceReading": "Ikatise go Buisa Se",
+    "externalSources": "Metswedi ya Dikgang ya Kwa Ntle",
+    "visitSource": "Etela Webosaete"
+  },
+  "about": {
+    "title": "Ka ga go Ithuta go Buisa SA",
+    "mission": {
+      "title": "Maikaelelo a Rona",
+      "text": "Re dumela gore mongwe le mongwe o tshwanetse go nna le tšhono ya go ithuta go buisa. Setlhao sa rona se fana ka thuto ya mahala, e e fitlhelelang ya go buisa le go kwala ka dipuo tsa Aforika Borwa le kwa ntle."
+    },
+    "crisis": {
+      "title": "Mathata a go Buisa le go Kwala",
+      "text": "Aforika Borwa e lebane le nngwe ya dipalopalo tse di maswe go gaisa tsa go buisa le go kwala magareng a dinaga tse di tshwanang. Dipatlisiso di bontsha gore 78% ya baithuti ba Mophato wa 4 ga ba kgone go buisa ka go tlhaloganya."
+    },
+    "causes": {
+      "title": "Goreng Se se Direga",
+      "poverty": "Lehuma le thibela phitlhelelo ya dibuka le didiriswa tsa go ithuta",
+      "resources": "Dikolo di tlhoka dibuka le barutabana ba ba katisitsweng",
+      "language": "Bana gantsi ba ithuta ka puo ya bobedi",
+      "early": "Phitlhelelo e e kwa tlase ya go buisa mo bongwaneng"
+    },
+    "solution": {
+      "title": "Re Thusa Jang",
+      "text": "Setlhao sa rona se dirisa mekgwa e e needitsweng go thusa batho go ithuta go buisa mo dingwageng dife le dife."
+    }
+  },
+  "reading": {
+    "play": "Tshameka",
+    "pause": "Emisa",
+    "stop": "Emisa",
+    "restart": "Simolola Sesha",
+    "speed": "Lebelo la go Buisa",
+    "verySlow": "Ka Bonya Thata",
+    "slow": "Ka Bonya",
+    "normal": "Tlwaelo",
+    "fast": "Ka Bonako",
+    "veryFast": "Ka Bonako Thata",
+    "voice": "Lentswe"
+  },
+  "footer": {
+    "mission": "Go thusa Maaforika Borwa le Maaforika otlhe go ithuta go buisa, lefoko ka lefoko.",
+    "quickLinks": "Dikgolagano tse di Potlakang",
+    "languages": "Dipuo",
+    "contact": "Ikgolaganye",
+    "contactText": "A o na le dipotso kgotsa o batla go thusa? Ikgolaganye le rona.",
+    "rights": "Ditshwanelo tsotlhe di sireletsegile."
+  },
+  "common": {
+    "loading": "E a laodiwa...",
+    "error": "Go na le se se sitileng",
+    "tryAgain": "Leka Gape",
+    "next": "E e Latelang",
+    "previous": "E e Fetileng",
+    "close": "Tswala"
+  }
+}
