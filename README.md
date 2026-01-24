@@ -9,6 +9,30 @@ South Africa faces a severe literacy crisis:
 - South Africa ranks last among 57 countries in international reading assessments
 - Millions of adults have low literacy skills
 
+## Stats & Resources
+
+Learn more about South Africa's literacy crisis:
+
+### Key Studies & Reports
+- [PIRLS 2021 South Africa Report](https://pirls2021.org/results/south-africa/) - Progress in International Reading Literacy Study showing SA ranked last among 57 countries
+- [PIRLS 2021 International Results](https://pirls2021.org/) - Full international comparison of Grade 4 reading achievement
+- [UNESCO Institute for Statistics - Literacy Data](http://uis.unesco.org/en/topic/literacy) - Global literacy rates and trends
+
+### South African Government & Research
+- [Department of Basic Education](https://www.education.gov.za/) - Official education policies and reports
+- [NEEDU Reports](https://www.education.gov.za/NEEDU.aspx) - National Education Evaluation & Development Unit assessments
+- [Human Sciences Research Council (HSRC)](https://www.hsrc.ac.za/) - South African education research
+
+### Organizations Working on Literacy
+- [Room to Read](https://www.roomtoread.org/countries/south-africa/) - Literacy and girls' education programs
+- [Nal'ibali](https://nalibali.org/) - National reading-for-enjoyment campaign in South Africa
+- [Wordworks](https://www.wordworks.org.za/) - Early literacy development organization
+- [The Reading Trust](https://www.readingtrust.org.za/) - Children's literacy NGO in South Africa
+
+### Academic Research
+- [South African Journal of Childhood Education](https://sajce.co.za/) - Peer-reviewed research on early education
+- [World Bank Education Data](https://data.worldbank.org/topic/education) - International education statistics
+
 ## The Solution
 
 Learn to Read SA provides free, accessible literacy education with:
