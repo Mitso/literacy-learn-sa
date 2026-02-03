@@ -14,6 +14,8 @@
  * - en-ZA-LukeNeural (Male SA English)
  */
 
+import { getAzureToken } from '../../utils/azureToken'
+
 interface SynthesizeRequest {
   text: string
   language?: string
@@ -80,22 +82,8 @@ export default defineEventHandler(async (event) => {
   const ssml = buildSSML(text, voice, locale, rate, pitch)
 
   try {
-    // Get access token
-    const tokenUrl = `https://${config.azureSpeechRegion}.api.cognitive.microsoft.com/sts/v1.0/issueToken`
-
-    const tokenResponse = await fetch(tokenUrl, {
-      method: 'POST',
-      headers: {
-        'Ocp-Apim-Subscription-Key': config.azureSpeechKey,
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    })
-
-    if (!tokenResponse.ok) {
-      throw new Error(`Token request failed: ${tokenResponse.status}`)
-    }
-
-    const accessToken = await tokenResponse.text()
+    // Get access token (with caching - P0 optimization)
+    const accessToken = await getAzureToken(config.azureSpeechKey, config.azureSpeechRegion)
 
     // Synthesize speech
     const synthesizeUrl = `https://${config.azureSpeechRegion}.tts.speech.microsoft.com/cognitiveservices/v1`

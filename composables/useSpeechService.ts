@@ -84,8 +84,21 @@ export const useSpeechService = () => {
 
   // Audio element for Azure
   const audioElement = ref<HTMLAudioElement | null>(null)
-  const audioQueue = ref<string[]>([])
   const isPlaying = ref(false)
+
+  // Track blob URL for cleanup (memory leak prevention)
+  let currentBlobUrl: string | null = null
+
+  // Track pending speech promise rejection
+  let rejectCurrentSpeech: (() => void) | null = null
+
+  // Cancellation flag - checked by speech functions to abort early
+  const isCancelled = ref(false)
+
+  // Pre-synthesis cache for Azure (word -> blob URL)
+  const audioCache = new Map<string, string>()
+  const pendingFetches = new Map<string, Promise<string>>()
+  const PRE_FETCH_AHEAD = 10 // Number of words to pre-fetch ahead
 
   /**
    * Initialize the speech service
@@ -113,15 +126,7 @@ export const useSpeechService = () => {
     // Create audio element for Azure
     if (typeof window !== 'undefined') {
       audioElement.value = new Audio()
-      audioElement.value.onended = () => {
-        isPlaying.value = false
-        playNextInQueue()
-      }
-      audioElement.value.onerror = () => {
-        isPlaying.value = false
-        error.value = 'Audio playback error'
-        playNextInQueue()
-      }
+      // Note: onended and onerror are set in playAudio() for each playback
     }
 
     updateAvailableVoices()
@@ -205,6 +210,11 @@ export const useSpeechService = () => {
 
     if (!text.trim()) return
 
+    // Check if cancelled before starting
+    if (isCancelled.value) {
+      return
+    }
+
     error.value = null
     isLoading.value = true
 
@@ -260,7 +270,19 @@ export const useSpeechService = () => {
   ): Promise<void> => {
     currentProvider.value = 'azure'
 
-    // Get audio from server
+    // Check cache first (for single words)
+    const trimmedText = text.trim()
+    if (audioCache.has(trimmedText)) {
+      return playAudio(audioCache.get(trimmedText)!)
+    }
+
+    // Check if already being fetched
+    if (pendingFetches.has(trimmedText)) {
+      const audioUrl = await pendingFetches.get(trimmedText)!
+      return playAudio(audioUrl)
+    }
+
+    // Not in cache, fetch synchronously
     const response = await $fetch('/api/speech/synthesize', {
       method: 'POST',
       body: {
@@ -272,15 +294,19 @@ export const useSpeechService = () => {
       }
     })
 
-    if (response.audioUrl) {
-      return playAudio(response.audioUrl)
-    } else if (response.audioBase64) {
-      const audioBlob = base64ToBlob(response.audioBase64, 'audio/mp3')
-      const audioUrl = URL.createObjectURL(audioBlob)
-      return playAudio(audioUrl)
+    if (!response.audioBase64) {
+      throw new Error('No audio data received')
     }
 
-    throw new Error('No audio data received')
+    const audioBlob = base64ToBlob(response.audioBase64, 'audio/mp3')
+    const audioUrl = URL.createObjectURL(audioBlob)
+
+    // Cache single words for reuse
+    if (!trimmedText.includes(' ')) {
+      audioCache.set(trimmedText, audioUrl)
+    }
+
+    return playAudio(audioUrl)
   }
 
   /**
@@ -300,6 +326,12 @@ export const useSpeechService = () => {
 
       currentProvider.value = 'native'
 
+      // Store reject function for stop/pause
+      rejectCurrentSpeech = () => {
+        rejectCurrentSpeech = null
+        resolve() // Resolve instead of reject to avoid error handling
+      }
+
       // Cancel any ongoing speech
       nativeSynthesis.value.cancel()
 
@@ -317,11 +349,32 @@ export const useSpeechService = () => {
         utterance.voice = nativeVoice
       }
 
-      utterance.onend = () => resolve()
-      utterance.onerror = (e) => reject(e)
+      utterance.onend = () => {
+        rejectCurrentSpeech = null
+        resolve()
+      }
+      utterance.onerror = (e) => {
+        rejectCurrentSpeech = null
+        // Ignore 'interrupted' errors from cancel()
+        if (e.error === 'interrupted') {
+          resolve()
+        } else {
+          reject(e)
+        }
+      }
 
       nativeSynthesis.value.speak(utterance)
     })
+  }
+
+  /**
+   * Check if a blob URL is in the cache (should not be revoked)
+   */
+  const isUrlCached = (url: string): boolean => {
+    for (const cachedUrl of audioCache.values()) {
+      if (cachedUrl === url) return true
+    }
+    return false
   }
 
   /**
@@ -334,13 +387,33 @@ export const useSpeechService = () => {
         return
       }
 
+      // Only revoke previous blob URL if it's NOT in the cache
+      // Cached URLs are managed by clearCache() and should persist for reuse
+      if (currentBlobUrl && !isUrlCached(currentBlobUrl)) {
+        URL.revokeObjectURL(currentBlobUrl)
+      }
+      currentBlobUrl = null
+
+      // Track new blob URL if applicable
+      if (url.startsWith('blob:')) {
+        currentBlobUrl = url
+      }
+
+      // Store resolve function for stop
+      rejectCurrentSpeech = () => {
+        rejectCurrentSpeech = null
+        resolve() // Resolve instead of reject to avoid error handling
+      }
+
       audioElement.value.src = url
       audioElement.value.onended = () => {
         isPlaying.value = false
+        rejectCurrentSpeech = null
         resolve()
       }
       audioElement.value.onerror = () => {
         isPlaying.value = false
+        rejectCurrentSpeech = null
         reject(new Error('Audio playback failed'))
       }
 
@@ -350,32 +423,102 @@ export const useSpeechService = () => {
   }
 
   /**
-   * Add text to speech queue
+   * Synthesize a word to cache without playing it (Azure only)
    */
-  const queueSpeak = (text: string) => {
-    audioQueue.value.push(text)
-    if (!isPlaying.value) {
-      playNextInQueue()
+  const synthesizeToCache = async (word: string): Promise<string> => {
+    // Check if already cached
+    if (audioCache.has(word)) {
+      return audioCache.get(word)!
+    }
+
+    // Check if already being fetched
+    if (pendingFetches.has(word)) {
+      return pendingFetches.get(word)!
+    }
+
+    const targetVoice = selectedVoice.value?.name
+    const targetLang = locale.value
+
+    // Create the fetch promise
+    const fetchPromise = (async () => {
+      try {
+        const response = await $fetch('/api/speech/synthesize', {
+          method: 'POST',
+          body: {
+            text: word,
+            language: targetLang,
+            voice: targetVoice,
+            rate: 1.0,
+            pitch: 1.0
+          }
+        })
+
+        if (!response.audioBase64) {
+          throw new Error('No audio data received')
+        }
+
+        const audioBlob = base64ToBlob(response.audioBase64, 'audio/mp3')
+        const audioUrl = URL.createObjectURL(audioBlob)
+
+        // Store in cache
+        audioCache.set(word, audioUrl)
+        pendingFetches.delete(word)
+
+        return audioUrl
+      } catch (err) {
+        pendingFetches.delete(word)
+        throw err
+      }
+    })()
+
+    pendingFetches.set(word, fetchPromise)
+    return fetchPromise
+  }
+
+  /**
+   * Pre-synthesize multiple words in background (Azure only)
+   * Call this when starting to read to warm up the cache
+   */
+  const preSynthesizeWords = async (words: string[], startIndex: number = 0) => {
+    if (!isAzureAvailable.value || selectedVoice.value?.provider !== 'azure') {
+      return // Only pre-fetch for Azure
+    }
+
+    const wordsToFetch = words
+      .slice(startIndex, startIndex + PRE_FETCH_AHEAD)
+      .filter(word => word.trim().length > 0)
+      .filter(word => !audioCache.has(word) && !pendingFetches.has(word))
+
+    // Fetch in parallel (but limit concurrency to avoid overwhelming the API)
+    const BATCH_SIZE = 5
+    for (let i = 0; i < wordsToFetch.length; i += BATCH_SIZE) {
+      const batch = wordsToFetch.slice(i, i + BATCH_SIZE)
+      await Promise.all(batch.map(word => synthesizeToCache(word).catch(() => {})))
     }
   }
 
   /**
-   * Play next item in queue
+   * Clear the audio cache and revoke all blob URLs
    */
-  const playNextInQueue = async () => {
-    if (audioQueue.value.length === 0) return
-
-    const text = audioQueue.value.shift()
-    if (text) {
-      await speak({ text })
-    }
+  const clearCache = () => {
+    audioCache.forEach(url => URL.revokeObjectURL(url))
+    audioCache.clear()
+    pendingFetches.clear()
   }
 
   /**
    * Stop all speech
    */
   const stop = () => {
-    // Stop native
+    // Set cancellation flag first - this prevents any pending operations from continuing
+    isCancelled.value = true
+
+    // Resolve any pending speech promise
+    if (rejectCurrentSpeech) {
+      rejectCurrentSpeech()
+    }
+
+    // Stop native speech
     if (nativeSynthesis.value) {
       nativeSynthesis.value.cancel()
     }
@@ -386,35 +529,20 @@ export const useSpeechService = () => {
       audioElement.value.currentTime = 0
     }
 
-    // Clear queue
-    audioQueue.value = []
+    // Cleanup blob URL only if not in cache (cached URLs are managed by clearCache())
+    if (currentBlobUrl && !isUrlCached(currentBlobUrl)) {
+      URL.revokeObjectURL(currentBlobUrl)
+    }
+    currentBlobUrl = null
+
     isPlaying.value = false
   }
 
   /**
-   * Pause speech
+   * Reset cancellation flag - call before starting new speech sequence
    */
-  const pause = () => {
-    if (nativeSynthesis.value) {
-      nativeSynthesis.value.pause()
-    }
-    if (audioElement.value) {
-      audioElement.value.pause()
-    }
-    isPlaying.value = false
-  }
-
-  /**
-   * Resume speech
-   */
-  const resume = () => {
-    if (nativeSynthesis.value) {
-      nativeSynthesis.value.resume()
-    }
-    if (audioElement.value && audioElement.value.paused) {
-      audioElement.value.play()
-    }
-    isPlaying.value = true
+  const resetCancellation = () => {
+    isCancelled.value = false
   }
 
   /**
@@ -440,6 +568,23 @@ export const useSpeechService = () => {
   // Watch for language changes
   watch(locale, () => {
     updateAvailableVoices()
+    // P2 Optimization: Clear cache when language changes (audio is language-specific)
+    clearCache()
+  })
+
+  // P2 Optimization: Clear cache when voice changes (audio is voice-specific)
+  // Only clear when switching between Azure voices (not during initial setup from native to Azure)
+  watch(selectedVoice, (newVoice, oldVoice) => {
+    if (oldVoice && newVoice && oldVoice.name !== newVoice.name) {
+      // Only clear cache if both voices are Azure (user intentionally switching)
+      // Skip if transitioning from native to Azure (initial setup)
+      if (oldVoice.provider === 'azure' && newVoice.provider === 'azure') {
+        console.log(`Voice changed from ${oldVoice.name} to ${newVoice.name}, clearing audio cache`)
+        clearCache()
+      } else {
+        console.log(`Voice changed from ${oldVoice.name} to ${newVoice.name} (provider switch, keeping cache)`)
+      }
+    }
   })
 
   return {
@@ -447,6 +592,7 @@ export const useSpeechService = () => {
     isAzureAvailable,
     isLoading,
     isPlaying,
+    isCancelled,
     error,
     currentProvider,
     availableVoices,
@@ -455,11 +601,11 @@ export const useSpeechService = () => {
     // Methods
     initialize,
     speak,
-    queueSpeak,
     stop,
-    pause,
-    resume,
     setVoice,
+    resetCancellation,
+    preSynthesizeWords,
+    clearCache,
 
     // Constants
     AZURE_VOICES,

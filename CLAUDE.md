@@ -22,16 +22,38 @@ This is a **Nuxt 3 + Vue 3** literacy learning platform designed to help South A
 - **Pinia** for state management
 - **@nuxtjs/i18n** for internationalization (8 languages)
 - **@vueuse/nuxt** for Vue composables
-- **Web Speech API** for text-to-speech
+- **Azure Speech SDK** for sentence-based synthesis with real-time word highlighting
+- **Web Speech API** as fallback for text-to-speech
 
 ### Key Architectural Patterns
 
+**Speech Services (Dual-Mode Architecture)**
+
+The application uses a tiered speech synthesis approach:
+
+1. **SDK Mode (Primary)** - `composables/useSpeechSdkService.ts`
+   - Uses Azure Speech SDK for sentence-based synthesis
+   - Real-time `wordBoundary` events for synchronized highlighting
+   - Single API call per sentence (vs per word)
+   - Natural prosody and intonation
+   - Auth tokens fetched from `/api/speech/token`
+
+2. **Word-by-Word Mode (Fallback)** - `composables/useSpeechService.ts`
+   - REST API calls per word via `/api/speech/synthesize`
+   - Pre-synthesis caching (10 words ahead, batches of 5)
+   - Falls back to native Web Speech API if Azure unavailable
+
+**Server-Side Token Management** - `server/utils/azureToken.ts`
+- Shared token caching (9-minute TTL, 1-minute buffer)
+- Used by both `/api/speech/token` and `/api/speech/synthesize`
+- Keeps API keys secure server-side
+
 **Reading System (`components/ReadingDisplay.vue`)**
-- Central component handling word-by-word reading with highlighting
-- Uses Web Speech API for voice synthesis
+- Dual-mode: SDK for sentences, word-by-word as fallback
+- Real-time word highlighting via SDK `wordBoundary` events
 - Emits events: `wordChange`, `complete`, `start`, `pause`
 - Props: `text`, `showPointer`, `autoStart`
-- Speed controlled via 1-5 scale (2000ms to 300ms per word)
+- Speed controlled via 1-5 scale (pause between words)
 
 **Content Store (`stores/content.ts`)**
 - Pinia store managing articles, lessons, and news sources
@@ -69,3 +91,11 @@ This is a **Nuxt 3 + Vue 3** literacy learning platform designed to help South A
 
 ### Composables
 - `composables/useContentStore.ts` - Wrapper for Pinia content store
+- `composables/useSpeechSdkService.ts` - Azure Speech SDK with word boundary events
+- `composables/useSpeechService.ts` - Word-by-word synthesis with pre-caching
+
+### API Endpoints
+- `GET /api/speech/token` - Fetch auth token for client-side SDK
+- `POST /api/speech/synthesize` - Server-side word synthesis (fallback mode)
+- `GET /api/speech/status` - Check Azure availability
+- `GET /api/speech/voices` - List available voices

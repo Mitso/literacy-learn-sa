@@ -63,8 +63,9 @@ npm run build
 - **Vue 3** - Composition API
 - **Pinia** - State management
 - **@nuxtjs/i18n** - Internationalization
-- **Microsoft Azure Speech** - High-quality text-to-speech for South African languages
-- **Web Speech API** - Browser fallback for text-to-speech
+- **Azure Speech SDK** - Sentence-based synthesis with real-time word highlighting
+- **Microsoft Azure Speech REST API** - Fallback for word-by-word synthesis
+- **Web Speech API** - Browser fallback when Azure is unavailable
 
 ## Azure Speech Setup (Optional)
 
@@ -85,11 +86,14 @@ Without Azure configured, the app falls back to the browser's native Web Speech 
 
 ### Reading Display
 The core component provides:
+- **Real-time word highlighting** synchronized with speech via Azure SDK word boundary events
 - Visual word highlighting with scale animation
 - Animated pointer below current word
 - Completed words marked in green
 - Click any word to jump to it
 - Progress bar tracking
+- **Dual-mode synthesis**: SDK for natural sentences, word-by-word as fallback
+- Pause/resume support with audio position memory
 
 ### Languages
 - English (default)
@@ -118,16 +122,27 @@ The core component provides:
 
 ```
 ├── components/
-│   └── ReadingDisplay.vue    # Core reading component
+│   └── ReadingDisplay.vue        # Core reading component (dual-mode)
+├── composables/
+│   ├── useSpeechSdkService.ts    # Azure SDK with word boundaries
+│   └── useSpeechService.ts       # Word-by-word fallback
+├── server/
+│   ├── api/speech/
+│   │   ├── token.get.ts          # Auth token for client SDK
+│   │   ├── synthesize.post.ts    # Word synthesis (fallback)
+│   │   ├── status.get.ts         # Azure availability
+│   │   └── voices.get.ts         # Available voices
+│   └── utils/
+│       └── azureToken.ts         # Shared token caching
 ├── pages/
-│   ├── index.vue             # Home
-│   ├── learn.vue             # Practice reading
-│   ├── lessons.vue           # Browse lessons
-│   └── news.vue              # Regional news
+│   ├── index.vue                 # Home
+│   ├── learn.vue                 # Practice reading
+│   ├── lessons.vue               # Browse lessons
+│   └── news.vue                  # Regional news
 ├── stores/
-│   └── content.ts            # Content management
-├── locales/                  # Translation files
-└── assets/css/main.css       # Global styles
+│   └── content.ts                # Content management
+├── locales/                      # Translation files
+└── assets/css/main.css           # Global styles
 ```
 
 ## Documentation
